@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Osborne Environmental | Energy reports for building permits</title>
+  <meta name="description" content="Send your plans to Osborne Environmental. We work out what your building department requires and prepare your REScheck, COMcheck, Manual J and Manual S reports.">
+  <meta property="og:title" content="Osborne Environmental">
+  <meta property="og:description" content="Send your plans. We work out what your building department requires and prepare the energy reports.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F6B2C0'/%3E%3Cpath d='M0 27C14 27 18 5 16 5S18 27 32 27' fill='none' stroke='%2312263F' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="wordmark" href="#main"><img src="logo.png" width="64" height="64" alt="">Osborne Environmental</a>
+      <nav aria-label="Main">
+        <a href="#process">How it works</a>
+        <a href="#reports">Reports</a>
+        <a href="#about">About Mark</a>
+        <a href="#questions">Questions</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <h1>Send your plans. We'll handle the energy paperwork.</h1>
+          <p class="lede">Osborne Environmental prepares the energy code reports and HVAC calculations for residential and commercial building permits. You don't need to know which ones apply. We work that out from your plans and your building department's requirements.</p>
+        </div>
+
+        <form class="send" id="send" action="/api/submit" method="post" enctype="multipart/form-data" aria-labelledby="send-title">
+          <h2 id="send-title">Send your plans</h2>
+
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+
+          <div class="field">
+            <label for="address">Project address</label>
+            <input id="address" name="address" type="text" autocomplete="off" required>
+          </div>
+
+          <div class="field">
+            <label for="plans">Home plans</label>
+            <input id="plans" name="plans" type="file" accept=".pdf,.dwg,.dxf,.rvt,.skp,.jpg,.jpeg,.png,.tif,.tiff,.zip" multiple required aria-describedby="plans-hint">
+            <p class="field__hint" id="plans-hint">PDF, CAD, image or ZIP files, up to 100 MB in total.</p>
+          </div>
+
+          <div class="field">
+            <label for="plotPlan">Plot plan</label>
+            <input id="plotPlan" name="plotPlan" type="file" accept=".pdf,.dwg,.dxf,.rvt,.skp,.jpg,.jpeg,.png,.tif,.tiff,.zip" multiple aria-describedby="plot-plan-hint">
+            <p class="field__hint" id="plot-plan-hint">Leave this empty if it's included with your home plans.</p>
+          </div>
+
+          <div class="field">
+            <label for="notes">Anything we should know? (optional)</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+          </div>
+
+          <div class="field field--trap" aria-hidden="true">
+            <label for="website">Leave this empty</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="button button--ink" type="submit">Send plans</button>
+          <p class="send__status" id="send-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <div class="batt" role="presentation"></div>
+
+    <div class="housewrap" aria-hidden="true">
+      <p>REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S</p>
+      <p>Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck &nbsp; COMcheck &nbsp; Manual J &nbsp; Manual S &nbsp; REScheck</p>
+    </div>
+
+    <section class="process" id="process">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>Send your plans</h3>
+            <p>Upload your home plans and plot plan with the project address. That's all we need to get started.</p>
+          </li>
+          <li>
+            <h3>We work out the requirements</h3>
+            <p>We check which reports your building department wants and which energy code it enforces, then confirm the work and price with you.</p>
+          </li>
+          <li>
+            <h3>You get your reports</h3>
+            <p>We prepare the reports and send them to you, ready for your permit application.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="reports" id="reports">
+      <div class="wrap">
+        <h2>What we prepare</h2>
+
+        <h3>Residential</h3>
+        <dl class="report-list">
+          <div>
+            <dt>REScheck</dt>
+            <dd>Shows that a home's walls, ceilings, floors, windows and doors meet the local energy code.</dd>
+          </div>
+          <div>
+            <dt>Manual J</dt>
+            <dd>Calculates how much heating and cooling a home needs, based on its size, construction and climate.</dd>
+          </div>
+          <div>
+            <dt>Manual S</dt>
+            <dd>Matches the HVAC equipment to the Manual J result, so the system is the right size for the load.</dd>
+          </div>
+        </dl>
+
+        <h3>Commercial</h3>
+        <dl class="report-list">
+          <div>
+            <dt>COMcheck</dt>
+            <dd>Shows that a commercial building's envelope, lighting and mechanical systems meet the energy code.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap about__inner">
+        <h2>About Mark</h2>
+        <p>Mark Osborne is an environmental and energy efficiency consultant for residential and commercial construction, with 10+ years of experience. He offers fast and accurate REScheck creation for energy efficiency code compliance.</p>
+      </div>
+    </section>
+
+    <section class="questions" id="questions">
+      <div class="wrap">
+        <h2>Questions</h2>
+        <details>
+          <summary>How do I know which reports I need?</summary>
+          <p>You don't have to. We review your plans, check your building department's requirements and tell you what your project needs.</p>
+        </details>
+        <details>
+          <summary>Do I need to know which energy code applies?</summary>
+          <p>No. We find that out from your project address.</p>
+        </details>
+        <details>
+          <summary>What if my plans are missing some details?</summary>
+          <p>Send what you have. If we need anything else, we'll ask you.</p>
+        </details>
+        <details>
+          <summary>What if my building department needs a stamped calculation?</summary>
+          <p>Some jurisdictions require a licensed engineer's stamp. If yours does, we'll tell you when we confirm the work.</p>
+        </details>
+        <details>
+          <summary>Is permit approval guaranteed?</summary>
+          <p>No. Your building department makes that decision.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="batt batt--flip" role="presentation"></div>
+      <div class="wrap closing__inner">
+        <h2>Ready when your plans are</h2>
+        <a class="button button--ink" href="#send">Send your plans</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Osborne Environmental LLC</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
